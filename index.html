@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.ibb.co/GP3dyzw/IMG-6199.jpg">
+    <title>Frontend-кейс</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+
+    
+<header class="header">
+    <h1>Underground</h1>
+</header>
+        
+    
+    <div class="wrapper">
+
+        <form class="form" onsubmit="sendEmailTelegram(event)">
+            <h3>ЗАЯВКА НА УЧАСТИЕ</h3>
+            <p class="form-title">Для участия достаточно заполнить форму нижe</p>
+            <div class="form__group">
+                <div class="form-field">
+                    <label for="fio">ФИО</label>
+                    <input type="text" name="fio" id="fio" autocomplete="off" maxlength="60" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="year">Дата рождения:</label>
+                    <input type="date" name="year" id="year" required>
+                </div>
+                <div class="form-field">
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" name="phone" id="phone" autocomplete="off" maxlength="15" required>s
+                </div>
+                <div class="form-field">
+                    <label for="height">Рост (в см):</label>
+                    <input type="text" name="height" id="height" autocomplete="off" maxlength="60" required>
+                </div>
+                <div class="form-field">
+                    <label for="weight">Вес (в кг):</label>
+                    <input type="text" name="weight" id="weight" autocomplete="off" maxlength="60" required>
+                </div>
+                <div class="form-field">
+                    <label for="arm">Размах рук (в см):</label>
+                    <input type="text" name="arm" id="arm" autocomplete="off" maxlength="60" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="city">Город проживания:</label>
+                    <input type="text" name="city" id="city" autocomplete="off" maxlength="60" required>
+                </div>
+                <div class="form-field">
+                    <label for="hobby">Хобби:</label>
+                    <input type="text" name="hobby" id="hobby" autocomplete="off" maxlength="60">
+                </div>
+                <div class="form-field">
+                    <label for="insta">Ссылка на Ваш аккаунт в Instagram</label>
+                    <input type="text" name="insta" id="insta" placeholder="https://" autocomplete="off">
+                </div>
+                <div class="textarea-field">
+                    <label for="awards">Достижения, награды, титулы:</label>
+                    <textarea type="text" id="awards" id="awards" name="awards" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="form__submit-block">
+                <div class="form__submit-button">
+                    <button type="submit">Отправить</button>
+                </div>
+            </div>
+            <div class="form__send-result"></div>
+        </form>
+
+    </div>
+    <!-- <footer style="font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 10px 0;">
+        Подключайся к нам в телеграмм <a target="_blank" href="https://t.me/">@something</a>.
+    </footer> -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
