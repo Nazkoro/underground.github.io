@@ -26,16 +26,16 @@
             <p class="form-title">Для участия достаточно заполнить форму нижe</p>
             <div class="form__group">
                 <div class="form-field">
-                    <label for="fio">ФИО</label>
+                    <label for="fio">Имя/ Фамилия/ Прозвище (если есть):</label>
                     <input type="text" name="fio" id="fio" autocomplete="off" maxlength="60" required>
                 </div>
 
                 <div class="form-field">
-                    <label for="year">Дата рождения:</label>
+                    <label for="year">Возраст:</label>
                     <input type="date" name="year" id="year" required>
                 </div>
                 <div class="form-field">
-                    <label for="phone">Номер телефона</label>
+                    <label for="phone">Номер для связи</label>
                     <input type="tel" name="phone" id="phone" autocomplete="off" maxlength="15" required>s
                 </div>
                 <div class="form-field">
@@ -47,8 +47,8 @@
                     <input type="text" name="weight" id="weight" autocomplete="off" maxlength="60" required>
                 </div>
                 <div class="form-field">
-                    <label for="arm">Размах рук (в см):</label>
-                    <input type="text" name="arm" id="arm" autocomplete="off" maxlength="60" required>
+                    <label for="sport_type">Вид спорта:</label>
+                    <input type="text" name="sport_type" id="sport_type" autocomplete="off" maxlength="60" required>
                 </div>
 
                 <div class="form-field">
@@ -56,19 +56,30 @@
                     <input type="text" name="city" id="city" autocomplete="off" maxlength="60" required>
                 </div>
                 <div class="form-field">
-                    <label for="hobby">Хобби:</label>
-                    <input type="text" name="hobby" id="hobby" autocomplete="off" maxlength="60">
+                    <label for="ranks">Разряды:</label>
+                    <input type="text" name="ranks" id="ranks" autocomplete="off" maxlength="60">
                 </div>
                 <div class="form-field">
-                    <label for="insta">Ссылка на Ваш аккаунт в Instagram</label>
+                    <label for="insta">Свой инстаграм</label>
                     <input type="text" name="insta" id="insta" placeholder="https://" autocomplete="off">
                 </div>
+
                 <div class="textarea-field">
-                    <label for="awards">Достижения, награды, титулы:</label>
-                    <textarea type="text" id="awards" id="awards" name="awards" rows="5"></textarea>
+                    <label for="hasExpirience">Принимали ли участие в ютуб-проектах/промоушенах?</label>
+                    <textarea type="text" id="hasExpirience" name="hasExpirience" rows="3"></textarea>
+                </div>
+                <div class="textarea-field">
+                    <label for="telega">Свой телеграмм (если есть)</label>
+                    <textarea type="text" id="telega" name="telega" rows="3"></textarea>
+                </div>
+                <div class="textarea-field">
+                    <label for="awards">Титулы, достижения:</label>
+                    <textarea type="text" id="awards" name="awards" rows="3"></textarea>
                 </div>
             </div>
+            <p class="agree">Отправляя форму, я даю согласие на обработку моих персональных данных</p>
             <div class="form__submit-block">
+                
                 <div class="form__submit-button">
                     <button type="submit">Отправить</button>
                 </div>

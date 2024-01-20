@@ -14,9 +14,9 @@ async function sendEmailTelegram(event) {
     formSendResult.textContent = '';
 
 
-    const { fio, phone, year, height, weight, arm, city , hobby, insta ,awards } = Object.fromEntries(new FormData(form).entries());
+    const { fio, phone, year, height, weight, sport_type, city , ranks, insta ,awards , hasExpirience , telega } = Object.fromEntries(new FormData(form).entries());
     
-    const text = `Заявка от ${fio}!\nТелефон: ${phone}\nДата рождения: ${year}\nРост: ${height} см\nВес: ${weight} кг\nРазмах рук: ${arm} см Город: ${city}\nХобби: ${hobby}\nИнстаграм: ${insta}\nНаграды: ${awards}`;
+    const text = `Заявка от ${fio}!\nТелефон: ${phone}\nДата рождения: ${year}\nРост: ${height} см\nВес: ${weight} кг\nВид спорта: ${sport_type}\nГород: ${city}\nРазряды: ${ranks}\nИнстаграм: ${insta}\nНаграды: ${awards}\nПроекты: ${hasExpirience}\nТелеграмм: ${telega}`;
 
 
     try {
