@@ -11,16 +11,10 @@
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-
-
-    
-<header class="header">
-    <h1>Underground</h1>
-</header>
-        
-    
-    <div class="wrapper">
-
+    <header class="header">
+        <h1 class="header__title">Underground</h1>
+    </header>
+    <section class="wrapper">
         <form class="form" onsubmit="sendEmailTelegram(event)">
             <h3>ЗАЯВКА НА УЧАСТИЕ</h3>
             <p class="form-title">Для участия достаточно заполнить форму нижe</p>
@@ -32,7 +26,7 @@
 
                 <div class="form-field">
                     <label for="year">Возраст:</label>
-                    <input type="date" name="year" id="year" required>
+                    <input type="text" name="year" id="year" required>
                 </div>
                 <div class="form-field">
                     <label for="phone">Номер для связи</label>
@@ -63,14 +57,19 @@
                     <label for="insta">Свой инстаграм</label>
                     <input type="text" name="insta" id="insta" placeholder="https://" autocomplete="off">
                 </div>
-
-                <div class="textarea-field">
-                    <label for="hasExpirience">Принимали ли участие в ютуб-проектах/промоушенах?</label>
-                    <textarea type="text" id="hasExpirience" name="hasExpirience" rows="3"></textarea>
-                </div>
-                <div class="textarea-field">
+                <div class="form-field">
                     <label for="telega">Свой телеграмм (если есть)</label>
-                    <textarea type="text" id="telega" name="telega" rows="3"></textarea>
+                    <input type="text"  id="telega" name="telega" autocomplete="off"></input>
+                </div>
+
+                <div class="form-field">
+                    <label for="hasExpirience">Принимали ли участие в промоушенах?</label>
+                    <input type="text" id="hasExpirience" name="hasExpirience" ></input>
+                </div>
+
+                <div class="form-field">
+                    <label for="filefield">Фото по торсу:</label>
+                    <input type="file" name="filefield" id="filefield" accept="image/*" required>
                 </div>
                 <div class="textarea-field">
                     <label for="awards">Титулы, достижения:</label>
@@ -79,18 +78,22 @@
             </div>
             <p class="agree">Отправляя форму, я даю согласие на обработку моих персональных данных</p>
             <div class="form__submit-block">
-                
                 <div class="form__submit-button">
                     <button type="submit">Отправить</button>
                 </div>
             </div>
             <div class="form__send-result"></div>
         </form>
-
-    </div>
-    <!-- <footer style="font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 10px 0;">
-        Подключайся к нам в телеграмм <a target="_blank" href="https://t.me/">@something</a>.
-    </footer> -->
+    </section>
+    <footer class="footer">
+        <span class="footer__text">Мы в социальных сетях: </span>
+        <a href="https://t.me/underground_fighting" target="_blank">
+            <img  src="img/telega-icon3.svg" alt="telegram" width="30" height="30">
+        </a>
+        <a href="https://instagram.com/underground.x.media" target="_blank">
+            <img  src="img/instagram.svg" alt="instagram" width="30" height="30">
+        </a>
+    </footer>
     <script src="./js/index.js"></script>
 </body>
 </html>

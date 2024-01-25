@@ -21,16 +21,22 @@ body {
    justify-content: center;
    align-items: center;
    height: 60px;
-   background-color: #291810;
    color: white;
+   background: #170e30a6;
+}
+.header__title{
+   display: flex;
+   justify-content: flex-end;
 }
 
+
 .wrapper{
+   padding: 0 10px;
    flex-grow: 1;
 }
 
 .form {
-   max-width: 700px;
+   max-width: 730px;
    margin: 50px auto 0;
    font-family: 'Oswald', sans-serif;
 }
@@ -76,7 +82,7 @@ body {
 .form-title{
    text-align: center;
    margin-bottom: 1rem;
-   color: #767676;
+   color: #c4c2d3;
    font-size: 1.3rem;
 }
 
@@ -86,12 +92,15 @@ body {
    gap: 10px;
    margin-bottom: 5px;
    padding: 10px;
-   background: #291810;
+   background: #2400714a
+   
 }
 
 .form__group input, .form__group label, .form__group textarea {
    display: block;
    width: 100%;
+   border-radius: 4px;
+
 }
 
 .form__group input {
@@ -110,14 +119,16 @@ body {
 }
 
 .form__submit-block {
+   margin-top: 14px;
    padding: 10px 20px 20px;
    text-align: center;
    cursor: pointer;
 }
 
 .form__submit-button {
+   border-radius: 4px;
    display: inline-block;
-   padding: 5px 10px;
+   padding: 5px 20px;
    background: #FEFEFE;
 }
 
@@ -129,6 +140,7 @@ body {
    cursor: pointer;
 }
 .form-field{
+   height: 55px;
     flex: 0 0 32%;
     max-width: 32.5%;
 }
@@ -149,6 +161,7 @@ textarea{
    resize: none; 
    font-size: 14px;
    padding: 5px;
+  
 }
 
 .agree{
@@ -156,12 +169,26 @@ textarea{
    color: white;
 }
 
+.footer{
+    display: flex;
+    gap: 10px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background: #170e30a6;
+    color: white;
+}
 
-footer a {
-   color: #FEFEFE;
+.footer__text{
+   color: white;
+   font-size: 18px;
 }
 
 @media (max-width: 768px){
+   .header{
+      padding-top: 10px;
+   }
+
    .form-field{
        flex: 0 0 100%;
        max-width: 100%;
