@@ -1,5 +1,3 @@
-"use strict"
-//==========================================
 const TELEGRAM_BOT_TOKEN = '6974955523:AAE1azHgrnSl8Pdb2qstwpPU2LIGc1Ra3KM';
 const TELEGRAM_CHAT_ID = '-1001899112708';
 const textAPI = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
