@@ -59,6 +59,7 @@ async function sendEmailTelegram(event) {
             formSendResult.textContent = 'Ваша заявка отправлена, мы с вами свяжемся!';
             form.reset()
         } else {
+            alert('Ошибка выполнения запроса')
             throw new Error('Ошибка выполнения запроса');
         }
 
