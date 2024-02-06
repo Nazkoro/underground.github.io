@@ -2,15 +2,15 @@ const TELEGRAM_BOT_TOKEN = '6974955523:AAE1azHgrnSl8Pdb2qstwpPU2LIGc1Ra3KM';
 const TELEGRAM_CHAT_ID = '-1001899112708';
 const textAPI = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
 const photoAPI = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendPhoto`
-let requestCounter = 0
 
 async function sendEmailTelegram(event) {
+    let attempt = Number(localStorage.getItem('attempt')) || 0
      event.preventDefault();
-     if(requestCounter >= 2){
-        alert('Внимание! Вы отправили уже 3 заявки. Для защиты от спама форма будет заблокирована на 1 час')
+     if(attempt >= 1){
+        alert('Внимание! Вы отправили уже 2 заявки. Для защиты от спама форма будет заблокирована на 1 час')
         document.getElementById("send-btn").disabled = true; 
         setTimeout(() => {
-            requestCounter = 0;
+             localStorage.setItem('attempt',0)
             document.getElementById("send-btn").disabled = false;
         }, 1000 * 60 *60);
         return
@@ -21,7 +21,7 @@ async function sendEmailTelegram(event) {
     formSendResult.textContent = '';
 
     const { fio, phone, year, height, weight, sport_type, city , ranks, insta ,awards , hasExpirience , telega } = Object.fromEntries(new FormData(form).entries());
-    const text = `Заявка от ${fio}!\nТелефон: ${phone}\nВозраст: ${year}\nРост: ${height} см\nВес: ${weight} кг\nВид спорта: ${sport_type}\nГород: ${city}\nРазряды: ${ranks}\nИнстаграм: ${insta}\nНаграды: ${awards}\nПроекты: ${hasExpirience}\nТелеграмм: ${telega}`;
+    const text = `Заявка от: ${fio}!\nТелефон: ${phone}\nВозраст: ${year}\nРост: ${height} см\nВес: ${weight} кг\nВид спорта: ${sport_type}\nГород: ${city}\nРазряды: ${ranks}\nИнстаграм: ${insta}\nНаграды: ${awards}\nПроекты: ${hasExpirience}\nТелеграмм: ${telega}`;
 
     const fileInput = document.getElementById('filefield');
     const photoFile = fileInput?.files[0];
@@ -54,7 +54,8 @@ async function sendEmailTelegram(event) {
         ]) 
         
         if (response1.ok && response2.ok) {
-            requestCounter+=1
+            attempt+=1
+            localStorage.setItem('attempt',attempt)
             alert('Ваша заявка отправлена, мы с вами свяжемся!')
             formSendResult.textContent = 'Ваша заявка отправлена, мы с вами свяжемся!';
             form.reset()
