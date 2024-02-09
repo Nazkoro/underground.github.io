@@ -11,10 +11,11 @@
     <title>Официальный сайт Underground Fighting - кулачные бои в Беларуси</title>
 
     <meta property="og:title" content="Официальный сайт Underground Fighting - кулачные бои в Беларуси">
-    <meta property="og:image" content="img/logo.png">
+    <meta property="og:image" content="https://undergroundx.by/img/fist5.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://undergroundx.by">
     <meta property="og:description" content="Underground - промоушен боев на голых кулаках в Беларуси. Принять участие могут как профессиональные боксеры, кикбоксеры, каратисты, бойцы MMA, так и «простые пацаны с улицы».Бои проходят в ринге." />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -91,6 +92,50 @@
             </div>
             <div class="form__send-result"></div>
         </form>
+
+    <section class="galery">
+
+        <h2 class="galery-title">
+            Наша <br/>
+            фотогалерея
+        </h2>
+
+        <!-- Swiper --> 
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="./img/fighters/6.JPG" target="_blank">
+                        <img src="./img/fighters/6.JPG" loading="lazy" class="grayscale"  alt="Боец"/>
+                    </a>
+                </div>
+                    <div class="swiper-slide">
+                        <a href="./img/fighters/7.JPG" target="_blank">
+                            <img src="./img/fighters/7.JPG" loading="lazy" class="grayscale" alt="Боец"/>
+                        </a>
+                    </div>
+                <div class="swiper-slide">
+                    <a href="./img/fighters/2.JPG" target="_blank">
+                        <img src="./img/fighters/2.JPG" loading="lazy" class="grayscale" alt="Боец"/>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./img/fighters/3.JPG" target="_blank">
+                        <img src="./img/fighters/3.JPG" loading="lazy" class="grayscale" alt="Боец"/>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="./img/fighters/4.JPG" target="_blank">
+                        <img src="./img/fighters/4.JPG" loading="lazy" class="grayscale" alt="Боец"/>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
     </section>
     <footer class="footer">
         <span class="footer__text">Мы в социальных сетях: </span>
@@ -101,6 +146,32 @@
             <img  src="img/instagram.svg" alt="instagram" width="30" height="30">
         </a>
     </footer>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+        const swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            },
+            breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 5
+            },
+            640: {
+            slidesPerView: 3,
+            spaceBetween: 10
+            },
+            900: {
+            slidesPerView: 4,
+            spaceBetween: 10
+            }
+        }
+        });
+      </script>
     <script src="./js/index.js"></script>
 </body>
 </html>
