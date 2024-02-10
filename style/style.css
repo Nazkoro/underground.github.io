@@ -190,7 +190,7 @@ textarea{
 }
 
 .grayscale {
-   /* max-height: 300px; */
+   
    filter: grayscale(100%);
    transition: 1s;
 }
