@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/fist5.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
     <meta name="description" content="Underground - промоушен боев на голых кулаках в Беларуси. Принять участие могут как профессиональные боксеры, кикбоксеры, каратисты, бойцы MMA, так и «простые пацаны с улицы».Бои проходят в ринге.">
     <meta name="keywords" content="бои на голых кулаках в Беларуси, заявка на участие, первая в беларуси лига кулачных боев, минск кулачные бои">
     <meta name="yandex-verification" content="ecff9a09b04f35ad" />
     <title>Официальный сайт Underground Fighting - кулачные бои в Беларуси</title>
 
     <meta property="og:title" content="Официальный сайт Underground Fighting - кулачные бои в Беларуси">
-    <meta property="og:image" content="https://undergroundx.by/img/fist5.png">
+    <meta property="og:image" type="image/x-icon" href="img/favicon.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://undergroundx.by">
     <meta property="og:description" content="Underground - промоушен боев на голых кулаках в Беларуси. Принять участие могут как профессиональные боксеры, кикбоксеры, каратисты, бойцы MMA, так и «простые пацаны с улицы».Бои проходят в ринге." />
@@ -22,6 +22,25 @@
     <header class="header">
         <img  src="img/logo.png"  width="240" height="70" alt="logo" >
     </header>
+    <section>
+        <div class="swiper mySwiper1 sw-caontainer1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slider1">
+                <a href="https://www.youtube.com/watch?v=eeV16-C7LRg&t=3949s&ab_channel=UndergroundFighting" target="_blank">
+                    <img class="image" src="./img/baner1.png" loading="lazy"  alt="img"/>
+                </a>
+              </div>
+              <div class="swiper-slide slider1-2">
+                <p class="text1"> <em>Underground 2</em></p>
+                <p class="text2">
+                    <em>23 Марта, клуб RE-PUBLIC</em>
+                </p>
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </section>
     <section class="wrapper">
         <form class="form" onsubmit="sendEmailTelegram(event)">
             <h3>ЗАЯВКА НА УЧАСТИЕ</h3>
@@ -101,31 +120,31 @@
             фотогалерея
         </h2>
 
-        <!-- Swiper --> 
-        <div class="swiper mySwiper">
+
+        <div class="swiper mySwiper sw-caontainer">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
+                <div class="swiper-slide slider">
                     <a href="./img/fighters/6.JPG" target="_blank">
                         <img src="./img/fighters/6.JPG" loading="lazy" class="grayscale"  alt="Боец"/>
                     </a>
                 </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide slider">
                         <a href="./img/fighters/7.JPG" target="_blank">
                             <img src="./img/fighters/7.JPG" loading="lazy" class="grayscale" alt="Боец"/>
                         </a>
                     </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide slider">
                     <a href="./img/fighters/2.JPG" target="_blank">
                         <img src="./img/fighters/2.JPG" loading="lazy" class="grayscale" alt="Боец"/>
                     </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide slider">
                     <a href="./img/fighters/3.JPG" target="_blank">
                         <img src="./img/fighters/3.JPG" loading="lazy" class="grayscale" alt="Боец"/>
                     </a>
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide slider">
                     <a href="./img/fighters/4.JPG" target="_blank">
                         <img src="./img/fighters/4.JPG" loading="lazy" class="grayscale" alt="Боец"/>
                     </a>
@@ -146,6 +165,15 @@
     </footer>
     <script type="module">
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+        const swiper1 = new Swiper(".mySwiper1", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+
         const swiper = new Swiper(".mySwiper", {
           slidesPerView: 3,
           spaceBetween: 30,
@@ -169,6 +197,7 @@
             }
         }
         });
+
       </script>
     <script src="./js/index.js"></script>
         <!-- Yandex.Metrika counter -->
