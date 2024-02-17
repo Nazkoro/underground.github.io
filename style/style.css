@@ -14,7 +14,6 @@ body {
    flex-direction: column;
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
    background: #070707;
-   /* background-image: url(../img/underground-bg.jpg); */
 }
 
 .header img {
